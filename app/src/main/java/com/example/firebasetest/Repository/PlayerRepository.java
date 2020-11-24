@@ -5,6 +5,7 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.example.firebasetest.Model.Player;
@@ -28,11 +29,11 @@ public class PlayerRepository {
     private List<Player> topPlayersListTemp = new ArrayList<>();
     public MutableLiveData<List<Player>> topPlayersList = new MutableLiveData<List<Player>>();
 
-    public MutableLiveData<List<Player>> getLiveData() {
-        CollectionReference collectionReference = firebaseFirestore
-                .collection("users");
-        collectionReference.orderBy("score", Query.Direction.DESCENDING)
-                .limit(10).addSnapshotListener(new EventListener<QuerySnapshot>() {
+    public LiveData<List<Player>> getTopPlayers(int number) {
+        CollectionReference collectionReference = firebaseFirestore.collection("users");
+        collectionReference
+                .orderBy("score", Query.Direction.DESCENDING)
+                .limit(number).addSnapshotListener(new EventListener<QuerySnapshot>() {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
