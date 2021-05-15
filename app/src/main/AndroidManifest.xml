@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstSprint">
-        <activity android:name="com.example.firebasetest.View.Splash">
+        <activity android:name=".View.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,14 +17,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.firebasetest.View.MainActivity3"
-            android:parentActivityName="com.example.firebasetest.View.MainActivity" />
+            android:name=".View.MainActivity3"
+            android:parentActivityName=".View.MainActivity" />
         <activity
-            android:name="com.example.firebasetest.View.HighscoreActivity"
-            android:parentActivityName="com.example.firebasetest.View.MainActivity" />
-        <activity android:name="com.example.firebasetest.View.MainActivity">
-
-        </activity>
+            android:name=".View.HighscoreActivity"
+            android:parentActivityName=".View.MainActivity" />
+        <activity android:name=".View.MainActivity" />
     </application>
 
 </manifest>
