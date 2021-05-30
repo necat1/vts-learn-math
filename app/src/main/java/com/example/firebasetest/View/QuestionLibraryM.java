@@ -1,31 +1,31 @@
 package com.example.firebasetest.View;
 
-public class QuestionLibrary {
+public class QuestionLibraryM {
     private String mQuestion [] = {
-            "Correct result is: 2*3+6 = ?",
-            "Correct result is: 5*7-5 = ?",
-            "Correct result is: 7+4*3 = ?",
-            "Correct result is: 3+8*9 = ?",
-            "Correct result is: 10-4/2 = ?",
-            "Correct result is: 6-2/0 = ?",
-            "Correct result is: 9/9+5*2 = ?",
-            "Correct result is: 8/2-3*0 = ?",
-            "Correct result is: 9*5+8/4 = ?",
-            "Correct result is: 8*6-10/2 = ?"
+            "Correct result is: 13*3+20 = ?",
+            "Correct result is: 5*7-17 = ?",
+            "Correct result is: 7+7*7 = ?",
+            "Correct result is: 10+6*12 = ?",
+            "Correct result is: 49-27/3 = ?",
+            "Correct result is: 6-16/4 = ?",
+            "Correct result is: 45/9+5*3 = ?",
+            "Correct result is: 42/3-2*5 = ?",
+            "Correct result is: 6*5+28/4 = ?",
+            "Correct result is: 16*6-0/17 = ?"
     };
     private String mChoices [] [] = {
-            {"12","13","14"},
-            {"29","30","31"},
+            {"59","60","61"},
             {"17","18","19"},
-            {"75","76","77"},
-            {"7","8","9"},
-            {"4","5","6"},
-            {"11","12","13"},
+            {"54","55","56"},
+            {"82","83","84"},
+            {"39","40","41"},
+            {"0","1","2"},
+            {"20","21","22"},
             {"3","4","5"},
-            {"45","46","47"},
-            {"43","44","45"}
+            {"35","36","37"},
+            {"96","97","98"}
     };
-    private String mCorrectAnswers [] = {"12","30","19","75","8","6","11","4","47","43"};
+    private String mCorrectAnswers [] = {"59","18","56","82","40","2","20","4","37","96"};
 
     public String getQuestion(int a){
         String question = mQuestion[a];
@@ -65,10 +65,6 @@ public class QuestionLibrary {
     };
     public String getChoice9(int a){
         String choice8 = mChoices[a][2];
-        return choice8;
-    };
-    public String getChoice10(int a){
-        String choice8 = mChoices[a][0];
         return choice8;
     };
 

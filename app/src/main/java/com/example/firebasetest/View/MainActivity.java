@@ -9,7 +9,6 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.firebasetest.PopActivity;
 import com.example.firebasetest.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -50,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), PopActivity.class);
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(i);
             }
         });
@@ -61,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void openActivity3() {
-        Intent intent = new Intent(this, com.example.firebasetest.View.MainActivity3.class);
+        Intent intent = new Intent(this, com.example.firebasetest.View.Levels.class);
         startActivity(intent);
     }
 }
