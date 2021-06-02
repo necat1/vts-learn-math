@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstSprint">
-        <activity android:name=".View.Levels"></activity>
+        <activity android:name=".NameActivity"></activity>
+        <activity android:name=".View.Levels" />
         <activity android:name=".ExpertActivity" />
         <activity android:name=".MediumActivity" />
         <activity android:name=".BeginerActivity" />

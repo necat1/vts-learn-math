@@ -51,11 +51,15 @@ public class ExpertActivity extends AppCompatActivity {
         mButtonChoice1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                updateQuestion();
                 //My logic for Button goes in here
                 if(mButtonChoice1.getText() == mAnswer){
-                    mScore = mScore + 1;
+                    mScore = mScore + 3;
                     updateScore(mScore);
-                    updateQuestion();
+                }
+
+                if (mQuestionNumber == 10){
+                    openName();
                 }
             }
         });
@@ -66,11 +70,15 @@ public class ExpertActivity extends AppCompatActivity {
         mButtonChoice2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                updateQuestion();
                 //My logic for Button goes in here
                 if(mButtonChoice2.getText() == mAnswer){
-                    mScore = mScore + 1;
+                    mScore = mScore + 3;
                     updateScore(mScore);
-                    updateQuestion();
+                }
+
+                if (mQuestionNumber == 9){
+                    openName();
                 }
             }
         });
@@ -81,11 +89,15 @@ public class ExpertActivity extends AppCompatActivity {
         mButtonChoice3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                updateQuestion();
                 //My logic for Button goes in here
                 if(mButtonChoice3.getText() == mAnswer){
-                    mScore = mScore + 1;
+                    mScore = mScore + 3;
                     updateScore(mScore);
-                    updateQuestion();
+                }
+
+                if (mQuestionNumber == 9){
+                    openName();
                 }
             }
         });
@@ -114,6 +126,11 @@ public class ExpertActivity extends AppCompatActivity {
     }
     public void openActivity() {
         Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+    public void openName() {
+        Intent intent = new Intent(this, NameActivity.class);
+        intent.putExtra("score", mScore);
         startActivity(intent);
     }
 }

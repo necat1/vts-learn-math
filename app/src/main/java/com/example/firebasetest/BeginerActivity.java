@@ -49,12 +49,17 @@ public class BeginerActivity extends AppCompatActivity {
         mButtonChoice1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                updateQuestion();
                 //My logic for Button goes in here
                 if(mButtonChoice1.getText() == mAnswer){
                     mScore = mScore + 1;
                     updateScore(mScore);
-                    updateQuestion();
                 }
+
+                 if (mQuestionNumber == 9){
+                    openName();
+                }
+
             }
         });
         //End of the Button Listener for Button1
@@ -64,11 +69,15 @@ public class BeginerActivity extends AppCompatActivity {
         mButtonChoice2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                updateQuestion();
                 //My logic for Button goes in here
                 if(mButtonChoice2.getText() == mAnswer){
                     mScore = mScore + 1;
                     updateScore(mScore);
-                    updateQuestion();
+                }
+
+                if (mQuestionNumber == 9){
+                    openName();
                 }
             }
         });
@@ -79,11 +88,15 @@ public class BeginerActivity extends AppCompatActivity {
         mButtonChoice3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                updateQuestion();
                 //My logic for Button goes in here
                 if(mButtonChoice3.getText() == mAnswer){
                     mScore = mScore + 1;
                     updateScore(mScore);
-                    updateQuestion();
+                }
+
+                if (mQuestionNumber == 9){
+                    openName();
                 }
             }
         });
@@ -112,6 +125,12 @@ public class BeginerActivity extends AppCompatActivity {
     }
     public void openActivity() {
         Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void openName() {
+        Intent intent = new Intent(this, NameActivity.class);
+        intent.putExtra("score", mScore);
         startActivity(intent);
     }
 }
