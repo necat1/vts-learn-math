@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.firebasetest.View.MainActivity;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
@@ -50,8 +51,15 @@ public class NameActivity extends AppCompatActivity {
                 user.put("score", score);
                 user.put("name", name);
                 firestore.collection("users").document(name).set(user);
+                openActivity();
             }
         });
+    }
+
+
+    public void openActivity() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
 }
