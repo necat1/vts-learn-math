@@ -49,7 +49,6 @@ public class BeginerActivity extends AppCompatActivity {
         mButtonChoice1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                updateQuestion();
                 //My logic for Button goes in here
                 if(mButtonChoice1.getText() == mAnswer){
                     mScore = mScore + 1;
@@ -59,6 +58,7 @@ public class BeginerActivity extends AppCompatActivity {
                  if (mQuestionNumber == 9){
                     openName();
                 }
+                updateQuestion();
 
             }
         });
@@ -69,7 +69,6 @@ public class BeginerActivity extends AppCompatActivity {
         mButtonChoice2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                updateQuestion();
                 //My logic for Button goes in here
                 if(mButtonChoice2.getText() == mAnswer){
                     mScore = mScore + 1;
@@ -79,6 +78,7 @@ public class BeginerActivity extends AppCompatActivity {
                 if (mQuestionNumber == 9){
                     openName();
                 }
+                updateQuestion();
             }
         });
         //End of the Button Listener for Button2
@@ -88,7 +88,6 @@ public class BeginerActivity extends AppCompatActivity {
         mButtonChoice3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                updateQuestion();
                 //My logic for Button goes in here
                 if(mButtonChoice3.getText() == mAnswer){
                     mScore = mScore + 1;
@@ -98,6 +97,7 @@ public class BeginerActivity extends AppCompatActivity {
                 if (mQuestionNumber == 9){
                     openName();
                 }
+                updateQuestion();
             }
         });
         //End of the Button Listener for Button3
@@ -106,13 +106,14 @@ public class BeginerActivity extends AppCompatActivity {
         mQuestionView.setText(mQuestionLibrary.getQuestion(mQuestionNumber));
         mButtonChoice1.setText(mQuestionLibrary.getChoice1(mQuestionNumber));
         mButtonChoice2.setText(mQuestionLibrary.getChoice2(mQuestionNumber));
-        mButtonChoice3.setText(mQuestionLibrary.getChoice4(mQuestionNumber));
-        mButtonChoice1.setText(mQuestionLibrary.getChoice5(mQuestionNumber));
-        mButtonChoice2.setText(mQuestionLibrary.getChoice6(mQuestionNumber));
-        mButtonChoice3.setText(mQuestionLibrary.getChoice7(mQuestionNumber));
-        mButtonChoice1.setText(mQuestionLibrary.getChoice8(mQuestionNumber));
-        mButtonChoice2.setText(mQuestionLibrary.getChoice9(mQuestionNumber));
-        mButtonChoice3.setText(mQuestionLibrary.getChoice10(mQuestionNumber));
+        mButtonChoice3.setText(mQuestionLibrary.getChoice3(mQuestionNumber));
+        mButtonChoice1.setText(mQuestionLibrary.getChoice4(mQuestionNumber));
+        mButtonChoice2.setText(mQuestionLibrary.getChoice5(mQuestionNumber));
+        mButtonChoice3.setText(mQuestionLibrary.getChoice6(mQuestionNumber));
+        mButtonChoice1.setText(mQuestionLibrary.getChoice7(mQuestionNumber));
+        mButtonChoice2.setText(mQuestionLibrary.getChoice8(mQuestionNumber));
+        mButtonChoice3.setText(mQuestionLibrary.getChoice9(mQuestionNumber));
+        mButtonChoice1.setText(mQuestionLibrary.getChoice10(mQuestionNumber));
 
 
         mAnswer = mQuestionLibrary.getCorrectAnswer(mQuestionNumber);

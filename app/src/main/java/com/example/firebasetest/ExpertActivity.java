@@ -51,16 +51,16 @@ public class ExpertActivity extends AppCompatActivity {
         mButtonChoice1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                updateQuestion();
                 //My logic for Button goes in here
                 if(mButtonChoice1.getText() == mAnswer){
                     mScore = mScore + 3;
                     updateScore(mScore);
                 }
 
-                if (mQuestionNumber == 10){
+                if (mQuestionNumber == 9){
                     openName();
                 }
+                updateQuestion();
             }
         });
         //End of the Button Listener for Button1
@@ -70,7 +70,7 @@ public class ExpertActivity extends AppCompatActivity {
         mButtonChoice2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                updateQuestion();
+
                 //My logic for Button goes in here
                 if(mButtonChoice2.getText() == mAnswer){
                     mScore = mScore + 3;
@@ -80,6 +80,7 @@ public class ExpertActivity extends AppCompatActivity {
                 if (mQuestionNumber == 9){
                     openName();
                 }
+                updateQuestion();
             }
         });
         //End of the Button Listener for Button2
@@ -89,7 +90,7 @@ public class ExpertActivity extends AppCompatActivity {
         mButtonChoice3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                updateQuestion();
+
                 //My logic for Button goes in here
                 if(mButtonChoice3.getText() == mAnswer){
                     mScore = mScore + 3;
@@ -99,6 +100,7 @@ public class ExpertActivity extends AppCompatActivity {
                 if (mQuestionNumber == 9){
                     openName();
                 }
+                updateQuestion();
             }
         });
         //End of the Button Listener for Button3
@@ -114,6 +116,7 @@ public class ExpertActivity extends AppCompatActivity {
         mButtonChoice1.setText(mQuestionLibrary.getChoice7(mQuestionNumber));
         mButtonChoice2.setText(mQuestionLibrary.getChoice8(mQuestionNumber));
         mButtonChoice3.setText(mQuestionLibrary.getChoice9(mQuestionNumber));
+        mButtonChoice1.setText(mQuestionLibrary.getChoice10(mQuestionNumber));
 
 
         mAnswer = mQuestionLibrary.getCorrectAnswer(mQuestionNumber);

@@ -68,8 +68,8 @@ public class QuestionLibrary {
         return choice8;
     };
     public String getChoice10(int a){
-        String choice8 = mChoices[a][0];
-        return choice8;
+        String choice9 = mChoices[a][0];
+        return choice9;
     };
 
     public String getCorrectAnswer(int a){

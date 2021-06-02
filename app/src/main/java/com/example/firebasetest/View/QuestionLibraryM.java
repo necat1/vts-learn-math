@@ -27,6 +27,7 @@ public class QuestionLibraryM {
     };
     private String mCorrectAnswers [] = {"59","18","56","82","40","2","20","4","37","96"};
 
+
     public String getQuestion(int a){
         String question = mQuestion[a];
         return question;
@@ -66,6 +67,10 @@ public class QuestionLibraryM {
     public String getChoice9(int a){
         String choice8 = mChoices[a][2];
         return choice8;
+    };
+    public String getChoice10(int a){
+        String choice9 = mChoices[a][0];
+        return choice9;
     };
 
     public String getCorrectAnswer(int a){
