@@ -172,6 +172,8 @@ public class BeginerActivity extends AppCompatActivity {
     public void openName() {
         Intent intent = new Intent(this, NameActivity.class);
         intent.putExtra("score", mScore);
+        intent.putExtra("time", mTimeLeftInMillis);
+        intent.putExtra("maxTime", START_TIME_MILLIS);
         startActivity(intent);
     }
 
@@ -194,7 +196,6 @@ public class BeginerActivity extends AppCompatActivity {
 
     private void killTimer() {
         mCountDownTimer.cancel();
-        mTimeLeftInMillis = START_TIME_MILLIS;
         mTimerRunning = false;
     }
 
