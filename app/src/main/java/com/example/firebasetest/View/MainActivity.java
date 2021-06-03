@@ -11,6 +11,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -78,5 +79,8 @@ public class MainActivity extends AppCompatActivity {
     public void openActivity3() {
         Intent intent = new Intent(this, com.example.firebasetest.View.Levels.class);
         startActivity(intent);
+    }
+    public void displayToast (View v) {
+        Toast.makeText(MainActivity.this,"Maja Drama Queen", Toast.LENGTH_SHORT).show();
     }
 }

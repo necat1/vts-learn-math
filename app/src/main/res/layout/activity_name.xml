@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:background="@drawable/backgr"
     android:orientation="vertical">
 
 
@@ -11,20 +12,29 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter Your Name" />
+        android:fontFamily="@font/bungee"
+        android:text="ENTER YOUR NAME:"
+        android:textAlignment="center"
+        android:textSize="20dp" />
 
     <EditText
         android:id="@+id/namePlainText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:fontFamily="sans-serif-medium"
         android:inputType="textPersonName"
-        android:text="Name" />
+        android:text="NAME"
+        android:alpha="0.5"
+        android:textAlignment="center" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="match_parent"
+        android:layout_width="243dp"
         android:layout_height="wrap_content"
-        android:text="Ok" />
+        android:layout_marginTop="15dp"
+        android:background="@drawable/radius"
+        android:text="Ok"
+        app:backgroundTint="#4CAF50" />
 
 </LinearLayout>

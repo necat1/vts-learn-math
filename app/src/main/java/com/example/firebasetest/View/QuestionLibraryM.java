@@ -2,16 +2,16 @@ package com.example.firebasetest.View;
 
 public class QuestionLibraryM {
     private String mQuestion [] = {
-            "Correct result is: 13*3+20 = ?",
-            "Correct result is: 5*7-17 = ?",
-            "Correct result is: 7+7*7 = ?",
-            "Correct result is: 10+6*12 = ?",
-            "Correct result is: 49-27/3 = ?",
-            "Correct result is: 6-16/4 = ?",
-            "Correct result is: 45/9+5*3 = ?",
-            "Correct result is: 42/3-2*5 = ?",
-            "Correct result is: 6*5+28/4 = ?",
-            "Correct result is: 16*6-0/17 = ?"
+            "CORRECT RESULT IS: 13*3+20 = ?",
+            "CORRECT RESULT IS: 5*7-17 = ?",
+            "CORRECT RESULT IS: 7+7*7 = ?",
+            "CORRECT RESULT IS: 10+6*12 = ?",
+            "CORRECT RESULT IS: 49-27/3 = ?",
+            "CORRECT RESULT IS: 6-16/4 = ?",
+            "CORRECT RESULT IS: 45/9+5*3 = ?",
+            "CORRECT RESULT IS: 42/3-2*5 = ?",
+            "CORRECT RESULT IS: 6*5+28/4 = ?",
+            "CORRECT RESULT IS: 16*6-0/17 = ?"
     };
     private String mChoices [] [] = {
             {"59","60","61"},
