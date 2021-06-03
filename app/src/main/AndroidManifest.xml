@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstSprint">
-        <activity android:name=".NameActivity"></activity>
+        <activity android:name=".NameActivity" />
         <activity android:name=".View.Levels" />
         <activity android:name=".ExpertActivity" />
         <activity android:name=".MediumActivity" />
@@ -25,6 +25,10 @@
             android:name=".View.HighscoreActivity"
             android:parentActivityName=".View.MainActivity" />
         <activity android:name=".View.MainActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
