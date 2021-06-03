@@ -4,12 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.firebasetest.View.Levels;
 import com.example.firebasetest.View.MainActivity;
 import com.example.firebasetest.View.QuestionLibrary;
+
+import java.util.Locale;
 
 public class BeginerActivity extends AppCompatActivity {
     Button button;
@@ -20,6 +24,12 @@ public class BeginerActivity extends AppCompatActivity {
     private Button mButtonChoice2;
     private Button mButtonChoice3;
 
+    private static final long START_TIME_MILLIS = 60000;
+    private TextView tvTimer;
+    private CountDownTimer mCountDownTimer;
+    private boolean mTimerRunning;
+    private long mTimeLeftInMillis = START_TIME_MILLIS;
+
     private String mAnswer;
     private int mScore = 0;
     private int mQuestionNumber = 0;
@@ -28,6 +38,9 @@ public class BeginerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beginer);
+
+        tvTimer = findViewById(R.id.tvTimer);
+
         button = (Button) findViewById(R.id.back);
 
         mScoreView = (TextView)findViewById(R.id.score);
@@ -35,6 +48,12 @@ public class BeginerActivity extends AppCompatActivity {
         mButtonChoice1 = (Button)findViewById(R.id.choice1);
         mButtonChoice2 = (Button)findViewById(R.id.choice2);
         mButtonChoice3 = (Button)findViewById(R.id.choice3);
+
+        if(mTimerRunning){
+            killTimer();
+        }else{
+            startTimer();
+        }
 
         updateQuestion();
         button.setOnClickListener(new View.OnClickListener() {
@@ -102,6 +121,20 @@ public class BeginerActivity extends AppCompatActivity {
         });
         //End of the Button Listener for Button3
     }
+
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        killTimer();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        killTimer();
+    }
+
     private void updateQuestion(){
         mQuestionView.setText(mQuestionLibrary.getQuestion(mQuestionNumber));
         mButtonChoice1.setText(mQuestionLibrary.getChoice1(mQuestionNumber));
@@ -128,10 +161,45 @@ public class BeginerActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+    public void openLevels() {
+        Intent intent = new Intent(this, Levels.class);
+        startActivity(intent);
+    }
 
     public void openName() {
         Intent intent = new Intent(this, NameActivity.class);
         intent.putExtra("score", mScore);
         startActivity(intent);
+    }
+
+    private void startTimer() {
+        mCountDownTimer = new CountDownTimer(mTimeLeftInMillis, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                mTimeLeftInMillis = millisUntilFinished;
+                updateCountDownText();
+            }
+
+            @Override
+            public void onFinish() {
+                killTimer();
+                openLevels();
+            }
+        }.start();
+        mTimerRunning = true;
+    }
+
+    private void killTimer() {
+        mCountDownTimer.cancel();
+        mTimeLeftInMillis = START_TIME_MILLIS;
+        mTimerRunning = false;
+    }
+
+    private void updateCountDownText() {
+        int minutes = (int) (mTimeLeftInMillis / 1000) / 60;
+        int seconds = (int) (mTimeLeftInMillis / 1000) % 60;
+
+        String timeLefFormatted = String.format(Locale.getDefault(),"%02d:%02d", minutes, seconds);
+        tvTimer.setText(timeLefFormatted);
     }
 }

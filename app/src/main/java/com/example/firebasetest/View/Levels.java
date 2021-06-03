@@ -51,7 +51,7 @@ public class Levels extends AppCompatActivity {
         button6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                openActivityMain();
             }
         });
     }
@@ -66,6 +66,9 @@ public class Levels extends AppCompatActivity {
     public void openActivity6() {
         Intent intent = new Intent(this, ExpertActivity.class);
         startActivity(intent);
-
+    }
+    public void openActivityMain() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
