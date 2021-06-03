@@ -2,6 +2,7 @@ package com.example.firebasetest.View;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -25,6 +26,8 @@ public class HighscoreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_highscore);
         ListView myListView = findViewById(R.id.list);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
 
         ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressbar);
         progressBar.setVisibility(View.VISIBLE);

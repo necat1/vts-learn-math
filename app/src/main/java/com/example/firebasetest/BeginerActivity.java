@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -42,6 +43,8 @@ public class BeginerActivity extends AppCompatActivity {
         tvTimer = findViewById(R.id.tvTimer);
 
         button = (Button) findViewById(R.id.back);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
 
         mScoreView = (TextView)findViewById(R.id.score);
         mQuestionView = (TextView)findViewById(R.id.question);

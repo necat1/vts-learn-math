@@ -5,7 +5,12 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,11 +18,16 @@ import com.example.firebasetest.R;
 
 public class MainActivity extends AppCompatActivity {
 
+
+
     Button button;
     Button button1;
     Button button2;
 
     MediaPlayer mp;
+
+    Animation topAnim;
+    ImageView image;
 
 
     @SuppressLint("WrongViewCast")
@@ -25,6 +35,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        topAnim = AnimationUtils.loadAnimation(this,R.anim.top_animation);
+        image = findViewById(R.id.imageView2);
+        image.setAnimation(topAnim);
 
         mp = MediaPlayer.create(this, R.raw.blazer_rail);
         mp.setLooping(true);

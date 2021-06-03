@@ -26,6 +26,9 @@ public class Levels extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_levels);
 
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+
         button3 = (Button) findViewById(R.id.Button3);
         button4 = (Button) findViewById(R.id.Button4);
         button5 = (Button) findViewById(R.id.Button5);
