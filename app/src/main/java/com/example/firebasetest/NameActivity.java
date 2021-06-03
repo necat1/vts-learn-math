@@ -23,6 +23,8 @@ public class NameActivity extends AppCompatActivity {
     private Button okBtn;
 
     private int score;
+    private long time;
+    private int maxTime;
 
     private String name;
 
@@ -43,6 +45,8 @@ public class NameActivity extends AppCompatActivity {
         nameEt = (EditText)findViewById(R.id.namePlainText);
         okBtn = (Button)findViewById(R.id.button3);
         score = getIntent().getExtras().getInt("score");
+        time = getIntent().getExtras().getLong("time");
+        maxTime = (int)(getIntent().getExtras().getLong("maxTime") / 1000);
         firestore = FirebaseFirestore.getInstance();
 
 
@@ -51,7 +55,7 @@ public class NameActivity extends AppCompatActivity {
             public void onClick(View v) {
                 name = nameEt.getText().toString();
 
-                user.put("score", score);
+                user.put("score", calcScore(score, maxTime, time));
                 user.put("name", name);
                 firestore.collection("users").document(name).set(user);
                 openActivity();
@@ -63,6 +67,11 @@ public class NameActivity extends AppCompatActivity {
     public void openActivity() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+    }
+
+    private int calcScore(int score, int maxTime, long leftTime) {
+        leftTime = (leftTime / 1000) % 60;
+        return (int)(((float)leftTime / maxTime) * 100 * score);
     }
 
 }
