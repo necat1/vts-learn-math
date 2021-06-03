@@ -26,6 +26,19 @@
             android:text="SCORE"
             android:textSize="20sp" />
         <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="89dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="140dp"
+            android:layout_marginBottom="24dp"
+            android:alpha="0.6"
+            android:background="@drawable/radius"
+            android:fontFamily="sans-serif-medium"
+            android:text="00:00"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/score"
@@ -45,18 +58,6 @@
         android:textAlignment="center"
         android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/tvTimer"
-        android:layout_width="89dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="140dp"
-        android:layout_marginBottom="24dp"
-        android:alpha="0.6"
-        android:background="@drawable/radius"
-        android:fontFamily="sans-serif-medium"
-        android:text="00:00"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <Button
         android:id="@+id/choice1"
