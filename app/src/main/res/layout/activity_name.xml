@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:background="@drawable/backgr"
+    android:textColor="#000000"
     android:orientation="vertical">
 
 
@@ -14,6 +15,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/bungee"
         android:text="ENTER YOUR NAME:"
+        android:textColor="#000000"
         android:textAlignment="center"
         android:textSize="20dp" />
 
@@ -22,13 +24,13 @@
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:alpha="0.7"
-        android:background="@drawable/radius"
+        android:background="@drawable/list"
         android:ems="10"
         android:fontFamily="sans-serif-medium"
         android:hint="Name"
         android:inputType="textPersonName"
         android:textAlignment="center"
-        android:textColor="@color/black" />
+        android:textColor="#000000" />
 
     <Button
         android:id="@+id/button3"
