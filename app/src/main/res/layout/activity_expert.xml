@@ -23,6 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:fontFamily="sans-serif-medium"
+            android:textColor="@color/black"
             android:text="SCORE"
             android:textSize="20sp" />
         <TextView
@@ -40,6 +41,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:id="@+id/score"
             android:layout_alignParentRight="true"
             android:text="0"
@@ -53,6 +55,7 @@
         android:layout_marginBottom="80dp"
         android:background="@drawable/radius"
         android:padding="8dp"
+        android:textColor="@color/black"
         android:text="Correct result is?"
         android:textAlignment="center"
         android:textSize="20sp" />
@@ -64,7 +67,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
-        android:background="#FFC107"
         android:padding="8dp"
         android:text="bird"
         android:textColor="#FFF"
@@ -75,7 +77,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
-        android:background="#0091EA"
         android:padding="8dp"
         android:text="door"
         android:textColor="#FFF"
@@ -86,7 +87,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
-        android:background="#0091EA"
         android:padding="8dp"
         android:text="rock"
         android:textColor="#FFF"
