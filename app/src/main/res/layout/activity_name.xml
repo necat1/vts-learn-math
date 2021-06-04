@@ -10,11 +10,11 @@
 
 
     <TextView
-        android:id="@+id/tvCorrectAnswers"
+        android:id="@+id/tvScore"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/bungee"
-        android:text="CORRECT ANSWERS: 0"
+        android:text="SCORE: 0"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="20dp" />
@@ -31,12 +31,12 @@
         android:textSize="20dp" />
 
     <TextView
-        android:id="@+id/tvScore"
+        android:id="@+id/tvFinalScore"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp"
         android:fontFamily="@font/bungee"
-        android:text="SCORE: 0"
+        android:text="FINAL SCORE: 0"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="20dp" />
