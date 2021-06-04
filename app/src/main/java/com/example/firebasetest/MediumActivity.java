@@ -77,7 +77,7 @@ public class MediumActivity extends AppCompatActivity {
                     updateScore(mScore);
                 }
 
-                if (mQuestionNumber == 9){
+                if (mQuestionNumber == 10){
                     openName();
                 }
                 updateQuestion();
@@ -96,7 +96,7 @@ public class MediumActivity extends AppCompatActivity {
                     updateScore(mScore);
                 }
 
-                if (mQuestionNumber == 9){
+                if (mQuestionNumber == 10){
                     openName();
                 }
                 updateQuestion();
@@ -115,7 +115,7 @@ public class MediumActivity extends AppCompatActivity {
                     updateScore(mScore);
                 }
 
-                if (mQuestionNumber == 9){
+                if (mQuestionNumber == 10){
                     openName();
                 }
                 updateQuestion();

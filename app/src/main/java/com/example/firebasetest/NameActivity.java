@@ -19,6 +19,9 @@ import java.util.Map;
 public class NameActivity extends AppCompatActivity {
 
     private TextView tv;
+    private TextView tvCorrectAnswers;
+    private TextView tvTime;
+    private TextView tvScore;
     private EditText nameEt;
     private Button okBtn;
 
@@ -42,12 +45,19 @@ public class NameActivity extends AppCompatActivity {
 
 
         tv = (TextView)findViewById(R.id.textView2);
+        tvCorrectAnswers = (TextView)findViewById(R.id.tvCorrectAnswers);
+        tvTime = (TextView)findViewById(R.id.tvTime);
+        tvScore = (TextView)findViewById(R.id.tvScore);
         nameEt = (EditText)findViewById(R.id.namePlainText);
         okBtn = (Button)findViewById(R.id.button3);
         score = getIntent().getExtras().getInt("score");
         time = getIntent().getExtras().getLong("time");
         maxTime = (int)(getIntent().getExtras().getLong("maxTime") / 1000);
         firestore = FirebaseFirestore.getInstance();
+
+        tvCorrectAnswers.setText("CORRECT ANSWERS: " + String.valueOf(score));
+        tvTime.setText("TIME: " + String.valueOf((time / 1000) % 60));
+        tvScore.setText("SCORE: " + String.valueOf(calcScore(score, maxTime, time)));
 
 
         okBtn.setOnClickListener(new View.OnClickListener() {

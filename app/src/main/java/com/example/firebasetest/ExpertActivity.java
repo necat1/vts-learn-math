@@ -76,7 +76,7 @@ public class ExpertActivity extends AppCompatActivity {
                     updateScore(mScore);
                 }
 
-                if (mQuestionNumber == 9){
+                if (mQuestionNumber == 10){
                     openName();
                 }
                 updateQuestion();
@@ -96,7 +96,7 @@ public class ExpertActivity extends AppCompatActivity {
                     updateScore(mScore);
                 }
 
-                if (mQuestionNumber == 9){
+                if (mQuestionNumber == 10){
                     openName();
                 }
                 updateQuestion();
@@ -116,7 +116,7 @@ public class ExpertActivity extends AppCompatActivity {
                     updateScore(mScore);
                 }
 
-                if (mQuestionNumber == 9){
+                if (mQuestionNumber == 10){
                     openName();
                 }
                 updateQuestion();

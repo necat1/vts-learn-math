@@ -11,6 +11,7 @@ public class QuestionLibraryE {
             "CORRECT RESULT IS: 45/15+8*3 = ?",
             "CORRECT RESULT IS: 42/14+12*8 = ?",
             "CORRECT RESULT IS: 6*5+28/4 = ?",
+            "CORRECT RESULT IS: 14*6-51/3 = ?",
             "CORRECT RESULT IS: 14*6-51/3 = ?"
     };
 
@@ -24,9 +25,10 @@ public class QuestionLibraryE {
             {"27","28","29"},
             {"98","99","100"},
             {"35","36","37"},
+            {"67","68","69"},
             {"67","68","69"}
     };
-    private String mCorrectAnswers [] = {"72","62","81","75","5","55","27","99","37","67"};
+    private String mCorrectAnswers [] = {"72","62","81","75","5","55","27","99","37","67", "67"};
 
     public String getQuestion(int a){
         String question = mQuestion[a];
